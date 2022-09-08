@@ -6,6 +6,16 @@ Blog website using react
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## To import Router
+
+--> old version
+npm add react-router-dom
+https://v5.reactrouter.com/web/guides/quick-start
+
+--> new version
+npm install react-router-dom
+https://reactrouter.com/en/main/getting-started/overview
+
 ## Available Scripts
 
 In the project directory, you can run:
