@@ -6,6 +6,10 @@ Blog website using react
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## To get the fonts
+
+https://fontawesome.com/
+
 ## To import Router
 
 --> old version
@@ -15,6 +19,10 @@ https://v5.reactrouter.com/web/guides/quick-start
 --> new version
 npm install react-router-dom
 https://reactrouter.com/en/main/getting-started/overview
+
+## To fetch the api data in frontend work
+
+--> npm install axios
 
 ## Available Scripts
 
