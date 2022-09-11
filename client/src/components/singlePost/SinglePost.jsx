@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useLocation } from "react-router";
+import { Link } from "react-router-dom";
 import "./singlePost.css";
 
 export default function SinglePost() {
@@ -32,7 +33,10 @@ export default function SinglePost() {
         </h1>
         <div className="singlePostInfo">
           <span className="singlePostAuthor">
-            Author: <strong>{post.username}</strong>
+            Author:
+            <Link className="link" to={`/?user=${post.username}`}>
+              <strong>{post.username}</strong>
+            </Link>
           </span>
           <span className="singlePostDate">
             {new Date(post.createdAt).toDateString()}
