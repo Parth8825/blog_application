@@ -29,6 +29,7 @@ export default function Register() {
         <label>Username</label>
         <input
           type="text"
+          name="username"
           className="registerInput"
           placeholder="Enter your Username..."
           onChange={(e) => setUsername(e.target.value)}
@@ -36,6 +37,7 @@ export default function Register() {
         <label>Email</label>
         <input
           type="text"
+          name="email"
           className="registerInput"
           placeholder="Enter your email..."
           onChange={(e) => setEmail(e.target.value)}
@@ -43,6 +45,7 @@ export default function Register() {
         <label>Password</label>
         <input
           type="password"
+          name="password"
           className="registerInput"
           placeholder="Enter your password..."
           onChange={(e) => setPassword(e.target.value)}
