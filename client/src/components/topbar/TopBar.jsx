@@ -1,15 +1,46 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../../context/Context";
 import "./topbar.css";
 
 export default function TopBar() {
-  const user = false;
+  const { user, dispatch } = useContext(Context);
+  const PF = "http://localhost:5000/images/";
+
+  const handleLogout = () => {
+    dispatch({ type: "LOGOUT" });
+  };
   return (
     <div className="top">
       <div className="topLeft">
-        <i className="topIcon fa-brands fa-facebook-square"></i>
-        <i className="topIcon fa-brands fa-twitter-square"></i>
-        <i className="topIcon fa-brands fa-pinterest-square"></i>
-        <i className="topIcon fa-brands fa-instagram-square"></i>
+        <a
+          href="https://www.facebook.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="topIcon fa-brands fa-facebook-square"></i>
+        </a>
+        <a
+          href="https://twitter.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="topIcon fa-brands fa-twitter-square"></i>
+        </a>
+        <a
+          href="https://www.pinterest.ca/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="topIcon fa-brands fa-pinterest-square"></i>
+        </a>
+        <a
+          href="https://www.instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="topIcon fa-brands fa-instagram-square"></i>
+        </a>
       </div>
       <div className="topCenter">
         <ul className="topList">
@@ -33,12 +64,16 @@ export default function TopBar() {
               WRITE
             </Link>
           </li>
-          <li className="topListItem">{user && "LOGOUT"}</li>
+          <li className="topListItem" onClick={handleLogout}>
+            {user && "LOGOUT"}
+          </li>
         </ul>
       </div>
       <div className="topRight">
         {user ? (
-          <img className="topImg" src="/images/profile/parth.png" alt="" />
+          <Link to="/settings">
+            <img className="topImg" src={PF + user.profilePic} alt="" />
+          </Link>
         ) : (
           <ul className="topList">
             <li className="topListItem">
@@ -53,7 +88,7 @@ export default function TopBar() {
             </li>
           </ul>
         )}
-        <i class="topSearchIcon fa-solid fa-magnifying-glass"></i>
+        <i className="topSearchIcon fa-solid fa-magnifying-glass"></i>
       </div>
     </div>
   );
