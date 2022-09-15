@@ -1,0 +1,33 @@
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#about-page {
+  background: url("../../../public/images/background/background.jpg");
+  background-size: cover;
+  text-align: justify;
+}
+
+#about-page h1 {
+  font-size: 3em;
+  font-weight: bold;
+  font-family: "Lobster", "Roboto", serif;
+}
+
+#about-page .row {
+  font-size: 1.1em;
+  margin-top: 7%;
+}
+
+.row {
+  margin-top: 10%;
+  width: 100%;
+}
+
+.row div {
+  padding-top: 20px;
+}

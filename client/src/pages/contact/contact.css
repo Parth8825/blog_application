@@ -1,0 +1,59 @@
+#contact-page {
+  background: url("../../../public/images/background/background.jpg");
+  background-size: cover;
+  text-align: center;
+  color: #333;
+}
+
+#contact-page h1 {
+  font-weight: bold;
+  font-family: "Lobster", "Roboto", serif;
+}
+
+#contact-page .row {
+  font-size: 1.1em;
+  margin-top: 7%;
+}
+
+.row {
+  margin-top: 10%;
+  width: 100%;
+}
+
+.row div {
+  padding-top: 20px;
+}
+
+.contactInfo {
+  margin-top: 3%;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.git {
+  color: black;
+  margin-left: 20px;
+}
+.git:hover {
+  color: gray;
+}
+
+.mailId {
+  font-size: 1.1em;
+  margin-top: 2%;
+  font-family: "Lobster", "Roboto", serif;
+  list-style: none;
+}
+
+.mailId a {
+  text-decoration: none;
+}
+/* unvisited link */
+.mailId a:link {
+  color: rgb(123, 120, 120);
+}
+
+/* mouse over link */
+.mailId a:hover {
+  color: rgb(84, 137, 230);
+}

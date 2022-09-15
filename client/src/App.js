@@ -12,6 +12,8 @@ import {
 } from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "./context/Context";
+import About from "./pages/about/About";
+import Contact from "./pages/contact/Contact";
 
 
 function App() {
@@ -28,6 +30,14 @@ function App() {
         <Route 
           path="/login" 
           element={user ? <Home/> : <Login/>} 
+        />
+        <Route 
+          path="/about" 
+          element={<About/>} 
+        />
+        <Route 
+          path="/contact" 
+          element={<Contact/>} 
         />
         <Route 
           path="/write" 
