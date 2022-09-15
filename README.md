@@ -27,6 +27,10 @@ https://reactrouter.com/en/main/getting-started/overview
 
 --> npm install axios
 
+## MERN stack app deploy to Heroku deployment
+
+https://github.com/safak/youtube/tree/free-deployment
+
 ## Available Scripts
 
 In the project directory, you can run:
