@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./write.css";
-import axios from "axios";
 import { useContext } from "react";
 import { Context } from "../../context/Context";
+import { axiosInstance } from "../../config";
 
 export default function Write() {
   const [title, setTitle] = useState("");
@@ -24,13 +24,13 @@ export default function Write() {
       data.append("file", file);
       newPost.photo = filename;
       try {
-        await axios.post("/upload", data);
+        await axiosInstance.post("/upload", data);
       } catch (err) {
         console.log(err);
       }
     }
     try {
-      const res = await axios.post("/posts", newPost);
+      const res = await axiosInstance.post("/posts", newPost);
       window.location.replace("/post/" + res.data._id);
     } catch (err) {
       console.log(err);
