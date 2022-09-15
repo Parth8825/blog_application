@@ -22,7 +22,10 @@ export default function Sidebar() {
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam.
+          minim veniam.{" "}
+          <Link className="link" to={"/about"}>
+            <b>Read more</b>
+          </Link>
         </p>
       </div>
       <div className="sidebarItem">
