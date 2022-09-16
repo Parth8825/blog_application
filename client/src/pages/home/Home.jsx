@@ -4,7 +4,7 @@ import Posts from "../../components/posts/Posts";
 import Sidebar from "../../components/sidebar/Sidebar";
 import "./home.css";
 import { useLocation } from "react-router-dom";
-import { axiosInstance } from "../../config";
+import { axiosInstance } from "../../Config";
 
 export default function Home() {
   //fetch post data
