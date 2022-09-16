@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./write.css";
 import { useContext } from "react";
 import { Context } from "../../context/Context";
-import { axiosInstance } from "../../config";
+import { axiosInstance } from "../../Config";
 
 export default function Write() {
   const [title, setTitle] = useState("");

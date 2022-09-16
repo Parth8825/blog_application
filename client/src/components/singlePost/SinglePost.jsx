@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { useEffect } from "react";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
-import { axiosInstance } from "../../config";
+import { axiosInstance } from "../../Config";
 import { Context } from "../../context/Context";
 import "./singlePost.css";
 
