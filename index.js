@@ -8,6 +8,7 @@ const postRoute = require("./routes/posts");
 const categoryRoute = require("./routes/categories");
 const multer = require("multer");
 const path = require("path");
+const cors = require('cors');
 
 dotenv.config();
 app.use(express.json());
@@ -35,7 +36,10 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/categories", categoryRoute);
-
+app.use(cors({
+  origin: 'http://localhost:3000',
+  optionsSuccessStatus: 200
+}))
 // link to front end
 app.use(express.static(path.join(__dirname, "/client/build/")));
 
@@ -45,5 +49,5 @@ app.get('*', (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT,() => {
-  console.log("Backend is running.");
+  console.log("Backend is running on http://localhost:5000");
 })

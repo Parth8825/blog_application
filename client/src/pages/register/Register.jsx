@@ -35,7 +35,7 @@ export default function Register() {
 
   const validate = (values) => {
     const errors = {};
-    const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    const regex = /^[\w-\\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     if (!values.username) {
       errors.username = "Username is required!";
       setIsSubmit(true);
